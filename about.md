@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ”소개”
+title: "소개"
 ---
 
 # 자기소개
