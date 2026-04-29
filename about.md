@@ -13,3 +13,5 @@ title: "소개"
 이 사이트는 **인문데이터과학개론** 수업에서
 HTML, CSS, JavaScript, Jekyll을 배우며
 만들고 있습니다.
+
+<script src="/assets/js/hello.js"></script> 
