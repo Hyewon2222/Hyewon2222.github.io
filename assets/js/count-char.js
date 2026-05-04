@@ -4,7 +4,7 @@ const text = "이상의 「날개」는 1936년에 발표된 단편소설이다.
 const target = "이";
 
 let count = 0;
-for (const ch in text) {
+for (const ch of text) {
     if (ch === target) {
         count++;
     }
