@@ -1,4 +1,4 @@
-// asset/js/freq.js
+// assets/js/freq.js
 function countChar(text, target) {
     let count = 0; // 초기화
     for (const ch of text) {
