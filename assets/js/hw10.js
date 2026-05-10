@@ -78,7 +78,7 @@ console.log(counts)
 
 // 3.
 for (let i = 0; i < targets.length; i++) {
-    console.log(`${targets[i]} : ${counts[i]}번`);
+    console.log(`'${targets[i]}' : ${counts[i]}번`);
 } 
 
 // 4.
