@@ -40,10 +40,10 @@ const long = works.filter(w => w.length >= 3);
 console.log(long);
 
 // 4.
-let count = 1; 
-for (const title of long) {
+let count = 0; 
+for (const title of long) {count++;
     console.log(`${count}번째 작품: ${title}`);
-    count++;
+   
 }
 
 // Q3
@@ -52,7 +52,6 @@ function countChar(text, target) {
     for (const ch of text){
         if (ch === target) {
             count++;
-
         }
     }
     return count;
@@ -94,4 +93,4 @@ for (let i = 1; i < counts.length; i++) {
     } 
 }
 const topTarget = targets[maxIdx];
-console.log(`가장 자주 나온 글자: '${topTarget}' ${counts[maxIdx]}번`);
+console.log(`가장 자주 나온 글자: '${topTarget}' (${counts[maxIdx]}번)`);
