@@ -29,7 +29,7 @@ console.log(works.length);
 console.log(works[0]);
 console.log(works[works.length -1]);
 
-const titled = works.map(work => `『${work}』`);
+const titled = works.map(work => `「${work}」`);
 console.log(titled);
 
 const long = works.filter(w => w.length >= 3);
@@ -47,14 +47,14 @@ function countChar(text, target) {
     }
     return count;
 }
-console.log (`${text}에서 ${target}는 ${count}번 등장합니다.`);
 
 countChar("박씨는 이씨에게 시집간 김씨의 외사촌 동생이다.", "씨");
-countChar("이상의 『날개』 는 1936년 작품이다.", "이");
+countChar("이상의 「날개」 는 1936년 작품이다.", "이");
 countChar("banana", "a");
+console.log (`${text}에서 ${target}는 ${count}번 등장합니다.`);
 
 // Q4
-const text = "이상의 『날개』 는 1936년에 발표된 단편소설이다.";
+const text = "이상의 「날개」 는 1936년에 발표된 단편소설이다.";
 const targets = ["이", "의", "날", "개", "소"];
 
 const counts = targets.map(t => countChar(text,t));
