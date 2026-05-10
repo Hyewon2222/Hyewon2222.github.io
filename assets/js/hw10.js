@@ -45,13 +45,16 @@ function countChar(text, target) {
     for(const ch of text){
         if (ch === target) count++;
     }
+
     return count;
+
+    console.log (`${text}에서 ${target}는 ${count}번 등장합니다.`);
 }
 
 countChar("박씨는 이씨에게 시집간 김씨의 외사촌 동생이다.", "씨");
 countChar("이상의 「날개」 는 1936년 작품이다.", "이");
 countChar("banana", "a");
-console.log (`${text}에서 ${target}는 ${count}번 등장합니다.`);
+
 
 // Q4
 const text = "이상의 「날개」 는 1936년에 발표된 단편소설이다.";
