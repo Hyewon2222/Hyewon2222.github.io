@@ -40,9 +40,10 @@ const long = works.filter(w => w.length >= 3);
 console.log(long);
 
 // 4.
-let count = 1; count++;
+let count = 1; 
 for (const title of long) {
     console.log(`${count}번째 작품: ${title}`);
+    count++;
 }
 
 // Q3
