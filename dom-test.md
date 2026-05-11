@@ -11,4 +11,4 @@ permalink: /dom-test/
 <ul id="freq-list"></ul>
 <p id="top-char"></p>
 
-<script src="/assets/js/dom-test.js"></script>
+<script src="/assets/js/dom-freq.js"></script>
