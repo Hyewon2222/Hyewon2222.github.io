@@ -27,7 +27,7 @@ for (let i = 1; i < counts.length; i++) {
 }
 
 const topChar = document.querySelector("#top-char");
-topChar.textContent = `가장 자주 나온 글자: ${targets[maxIdx]} (${counts[mazIdx]}번)`;
+topChar.textContent = `가장 자주 나온 글자: ${targets[maxIdx]} (${counts[maxIdx]}번)`;
 topChar.computedStyleMap.fontWeight = "bold";
 topChar.computedStyleMap.color = "crimson";
 
