@@ -34,7 +34,7 @@ function drawList(targets, counts) {
     }
 }
 
-function drawTaop(targets, counts) {
+function drawTap(targets, counts) {
     let maxIdx = 0;
     for (let i = 1; i < counts.length; i++) {
         if (counts[i] > counts[maxIdx]) maxIdx = i;
