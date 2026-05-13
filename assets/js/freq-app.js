@@ -20,7 +20,7 @@ form.addEventListener("submit", (e) => {
     const targets = targetBox.vlaue.split(",").map(s => s.trim());
     const counts = targets.map(t => countChar(text, t))
 
-    drawList(target, counts);
+    drawList(targets, counts);
     drawTop(targets, counts);
 });
 
