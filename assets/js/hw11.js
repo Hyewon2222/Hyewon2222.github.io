@@ -29,5 +29,4 @@ q2Input.addEventListener("input", (e) => {
     } else {
         q2Warn.textContent = "";
     }
-
 });
