@@ -3,7 +3,7 @@
 
 // Q1
 const themeBtn = document.querySelector("#theme-btn");
-const q1Box = document.querySelector("q1-box");
+const q1Box = document.querySelector("#q1-box");
 
 themeBtn.addEventListener("click", () => {
     q1Box.classList.toggle("dark");
