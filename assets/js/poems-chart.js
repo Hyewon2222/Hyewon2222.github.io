@@ -8,9 +8,9 @@ fetch("/data/poems.csv")
             .map(line => {
                 const cols = line.split(",")
                 return {
-                    year: Numbers(cols[0]),
+                    year: Number(cols[0]),
                     author: cols[1].trim(),
-                    count: Numbers(cols[2])
+                    count: Number(cols[2])
                 };
             });
         drawChart(data);
@@ -19,6 +19,7 @@ fetch("/data/poems.csv")
 function drawChart(rows) {
     const labels = rows.map(r => r.author)
     const counts = rows.map(r => r.count);
+
     const canvas = document.querySelector("#poems-chart")
      new Chart(canvas, {
         type: "bar",
