@@ -27,7 +27,7 @@ function removeStopwords(words, stopwords) {
 // 4. 단어들의 배열을 {단어:빈도} 꼴의 객체로 만들기
 function countWords(words) { // words: 단어들의 배열
     const counts = {}; // 빈 배열 초기화
-    for (const word in words) {
+    for (const word of words) {
         counts[word] = (counts[word] || 0) + 1;
     }
     return counts;
@@ -74,7 +74,6 @@ function drawChart(selector, top, color) {
                 label: "빈도", 
                 data: top.map(item => item[1]), // 빈도
                 backgroundColor: color // 색깔 
-
             }]
         },
         options: {
