@@ -26,7 +26,7 @@ function extractBody(text) {
 // 2. 텍스트를 단어 배열로 분리 (소문자화 및 문장부호 제거)
 function getWords(text) {
     // 모든 문장부호를 공백 한 칸(" ")으로 치환하여 단어가 붙는 것을 방지
-    const cleanedText = text.toLowerCase().replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@\[\]^_`{|}~]/g, " "); [cite: 32, 33]
+    const cleanedText = text.toLowerCase().replace(/[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@\[\]^_`{|}~]/g, " "); 
     // 공백 기준으로 단축 분리 후 빈 문자열 필터링
     return cleanedText.split(/\s+/).filter(w => w.length > 0);
 }
