@@ -39,5 +39,5 @@ NLTK 기본 목록 외에 총 13개의 단어를 `data/stopwords-custom.txt`에 
   * Dracula: `lucy`(루시), `van`(반), `helsing`(헬싱), `mina`(미나), `jonathan`(조나단), `room`(방), `door`(문), `went`(갔다), `came`(왔다) 등이 압도적이다. 드라큘라 백작이라는 절대적 악에 맞서 반 헬싱(`van helsing`)을 필두로 루시, 미나, 조나단 등 근대적 인물들이 결성되어 물리적으로 움직이는 집단 추적 극의 서사 구조를 그대로 보여준다. 더불어 인물들이 오고 가는 동사(`went`, `came`)와 함께, 사건이 기록되는 사적 공간(`room`)과 긴장감을 매개하는 경계선인 `door`(문)가 자주 등장하여 외부의 위협이 일상적 공간을 침범하는 서간체 소설의 형식과 서사적 긴장감을 명확히 지시하고 있다. 
 
 {% include chartjs.html %}
-<script src=”/assets/js/analysis.js”></script>
+<script src="/assets/js/analysis.js"></script>
 <script src="/assets/js/gothic.js"></script>
