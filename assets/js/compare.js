@@ -26,8 +26,7 @@ Promise.all([
     fetch("/data/stopwords-en.txt").then(r => r.text()),
 ]).then(
     ([scarletText, houndText, stopwordsText]) => {
-        const stopwords = stopwordsText.split(/\s+/).filter(w => w.length > 0);
-        const scarletTop = analyze(houndText, stopwords);
+        const scarletTop = analyze(scarletText, stopwords);
         const houndTop = analyze(houndText, stopwords);
         drawChart("#chart-scarlet", scarletTop, "rgba(220, 53, 69, 0.6)");
         drawChart("#chart-hound", houndTop, "rgba(54, 162, 235, 0.6)")
