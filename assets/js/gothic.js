@@ -38,15 +38,15 @@ Promise.all([
         if (!r.ok) throw new Error("frankenstein.txt 로드 실패");
         return r.text();
     }),
-    fetch("/assets/data/dracula.txt").then(r => {
+    fetch("/data/dracula.txt").then(r => {
         if (!r.ok) throw new Error("dracula.txt 로드 실패");
         return r.text();
     }),
-    fetch("/assets/data/stopwords-en.txt").then(r => {
+    fetch("/data/stopwords-en.txt").then(r => {
         if (!r.ok) throw new Error("stopwords-en.txt 로드 실패");
         return r.text();
     }),
-    fetch("/assets/data/stopwords-custom.txt").then(r => {
+    fetch("/data/stopwords-custom.txt").then(r => {
         if (!r.ok) throw new Error("stopwords-custom.txt 로드 실패 (파일이 올바르게 생성되었는지 확인하세요)");
         return r.text();
     })

@@ -33,9 +33,9 @@ function analyze(text, stopwords) {
 
 // 파일 읽고 처리하기
 Promise.all([
-    fetch("/assets/data/scarlet.txt").then(r => r.text()),
-    fetch("/assets/data/hound.txt").then(r => r.text()),
-    fetch("/assets/data/stopwords-en.txt").then(r => r.text()),
+    fetch("/data/scarlet.txt").then(r => r.text()),
+    fetch("/data/hound.txt").then(r => r.text()),
+    fetch("/data/stopwords-en.txt").then(r => r.text()),
 ]).then(
     ([scarletText, houndText, stopwordsText]) => {
         const stopwords = getWords(stopwordsText);
