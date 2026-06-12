@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 셜록 홈즈 비교 페이
+title: 셜록 홈즈 비교 페이지
 permalink: /compare/
 ---
 
