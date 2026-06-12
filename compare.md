@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 두 소설의 단어 빈도 비교
+title: 셜록 홈즈 비교 페이
 permalink: /compare/
 ---
 

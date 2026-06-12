@@ -8,7 +8,6 @@ function getWords(text) {
         .filter(w => w.length > 0);
 }
 
-
 function countWords(words) { // words: 단어들의 배열
     const counts = {}; // 빈 배열 초기화
     for (const word of words) {
@@ -26,8 +25,6 @@ function topN(counts, n) {
 function removeStopwords(words, stopwords) {
     return words.filter(w=> !stopwords.includes(w));
 }
-
-// assets/js/analysis.js
 
 function drawChart(selector, topData, color) {
     const canvas = document.querySelector(selector);

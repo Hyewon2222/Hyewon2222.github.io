@@ -1,20 +1,42 @@
 ---
 layout: page
-title: 두 소설의 단어 빈도 비교
+title: 고딕 소설 비교 페이지
 permalink: /gothic/
 ---
 
-<h2>A Study in Scarlet vs. The Hound of the Baskervilles</h2>
+<h2>Frankenstein vs. Dracula 상위 30개 단어</h2>
+
 <div style="display: flex; gap: 1em;">
-    <div style="flex: 1;">
-        <h3>A Study in Scarlet</h3>
-        <div style="height: 500px;"><canvas id="chart-scarlet"></canvas></div>
+  <div style="flex: 1;">
+    <h3>Frankenstein (Shelley, 1818)</h3>
+    <div style="height: 600px;">
+      <canvas id="chart-frankenstein"></canvas>
     </div>
-    <div style="flex: 1;">
-        <h3>The Hound of the Baskervilles</h3>
-        <div style="height: 500px;"><canvas id="chart-hound"></canvas></div>
+  </div>
+  <div style="flex: 1;">
+    <h3>Dracula (Stoker, 1897)</h3>
+    <div style="height: 600px;">
+      <canvas id="chart-dracula"></canvas>
     </div>
+  </div>
 </div>
+
+<br><br>
+## 보고서
+
+### 추가한 불용어와 근거
+NLTK 기본 목록 외에 총 13개의 단어를 `data/stopwords-custom.txt`에 추가했다: `'said', 'would', 'could', 'upon', 'one', 'yet', 'every', 'first', 'might', 'shall', 'know', 'must', 'see'`.
+
+* 근거: 이 단어들은 두 고딕 소설의 상위 빈도 분석 결과 최상위권을 대거 차지하고 있었으나, 소설 고유의 서사나 인물, 주제를 드러내기보다는 19세기 영국 소설의 문체적 특성과 보편적인 언어 구조를 보여줄 뿐이라고 판단했다. 대화 인용을 위한 기능어(`said`), 과거형 서사나 가정을 위한 조동사 및 부사(`would`, `could`, `might`, `shall`, `must`, `yet`), 문어체적 표현 및 대명사(`upon`, `one`, `every`, `first`), 그리고 서사 전개상 빈번할 수밖에 없는 인지/지각 동사(`know`, `see`) 등은 문학적 의미 분석에 실질적인 통찰을 주지 못한다. 따라서 두 작품의 고유한 문학적 차별성과 서사 구조를 명확히 확인하기 위해 이들을 불용어로 정의하고 분석 대상에서 제외했다.
+
+### 두 작품의 단어 빈도가 들려주는 이야기
+
+ * 공통으로 도드라지는 단어:
+  문체적 기능어들을 제거한 후, 두 작품 모두에서 `man`(인간), `night`(밤), `day`(낮), `time`(시간), `saw`(보았다/목격) 등의 키워드가 공통적으로 상위에 도드라진다. 이는 인간(`man`)이 마주한 초자연적 공포를 다루는 고딕 문학의 공통적 속성을 잘 보여준다. 특히 낮과 밤(`day`, `night`, `time`)의 시간적 대비와 공포의 대상을 직접 목격하는 행위(`saw`)가 두 소설 모두에서 서사를 이끄는 핵심 장치이자 고딕 특유의 어두운 분위기를 형성하는 정량적 기반임을 증명한다.
+
+* 한 작품에만 도드라지는 단어와 그것이 시사하는 작품의 특성
+  * Frankenstein: `father`(아버지), `life`(생명), `eyes`(눈), `elizabeth`(엘리자베스), `mind`(마음), `heart`(심장), `friend`(친구), `feelings`(감정), `death`(죽음) 등이 독보적으로 나타난다. 이는 피조물을 창조한 존재(`father`)로서의 인류학적 책임과 갈등, 생명(`life`)과 죽음(`death`)의 경계를 탐구하는 서사를 시사한다. 또한 인물의 내면적 사유와 정서적 갈등(`mind`, `heart`, `feelings`), 그리고 관계성(`friend`, 사촌이자 연인인 `elizabeth`)을 나타내는 어휘가 주를 이루어, 이 작품이 내면의 고뇌를 깊이 있게 기술하는 철학적·심리적 고딕 소설임을 투영한다.
+  * Dracula: `lucy`(루시), `van`(반), `helsing`(헬싱), `mina`(미나), `jonathan`(조나단), `room`(방), `door`(문), `went`(갔다), `came`(왔다) 등이 압도적이다. 드라큘라 백작이라는 절대적 악에 맞서 반 헬싱(`van helsing`)을 필두로 루시, 미나, 조나단 등 근대적 인물들이 결성되어 물리적으로 움직이는 집단 추적 극의 서사 구조를 그대로 보여준다. 더불어 인물들이 오고 가는 동사(`went`, `came`)와 함께, 사건이 기록되는 사적 공간(`room`)과 긴장감을 매개하는 경계선인 `door`(문)가 자주 등장하여 외부의 위협이 일상적 공간을 침범하는 서간체 소설의 형식과 서사적 긴장감을 명확히 지시하고 있다. 
 
 {% include chartjs.html %}
 <script src=”/assets/js/analysis.js”></script>
