@@ -1,4 +1,4 @@
-//[숙제14]
+//[숙제14]analysis.js
 
 function getWords(text) {
     return text

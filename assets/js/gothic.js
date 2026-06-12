@@ -1,4 +1,4 @@
-// [숙제14]
+// [숙제14] gothic.js
 // 2025-26179 조혜원
 
 // 1. 본문 추출 함수 (Gutenberg 서지정보 및 라이선스 제거)
@@ -34,19 +34,19 @@ function analyze(text, stopwords) {
 
 // 메인 실행: 4개 파일을 동시에 fetch하여 처리
 Promise.all([
-    fetch("/data/frankenstein.txt").then(r => {
+    fetch("/assets/data/frankenstein.txt").then(r => {
         if (!r.ok) throw new Error("frankenstein.txt 로드 실패");
         return r.text();
     }),
-    fetch("/data/dracula.txt").then(r => {
+    fetch("/assets/data/dracula.txt").then(r => {
         if (!r.ok) throw new Error("dracula.txt 로드 실패");
         return r.text();
     }),
-    fetch("/data/stopwords-en.txt").then(r => {
+    fetch("/assets/data/stopwords-en.txt").then(r => {
         if (!r.ok) throw new Error("stopwords-en.txt 로드 실패");
         return r.text();
     }),
-    fetch("/data/stopwords-custom.txt").then(r => {
+    fetch("/assets/data/stopwords-custom.txt").then(r => {
         if (!r.ok) throw new Error("stopwords-custom.txt 로드 실패 (파일이 올바르게 생성되었는지 확인하세요)");
         return r.text();
     })
