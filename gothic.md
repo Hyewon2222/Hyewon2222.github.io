@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 두 소설의 단어 빈도 비교
-permalink: /compare/
+permalink: /gothic/
 ---
 
 <h2>A Study in Scarlet vs. The Hound of the Baskervilles</h2>
@@ -18,4 +18,4 @@ permalink: /compare/
 
 {% include chartjs.html %}
 <script src=”/assets/js/analysis.js”></script>
-<script src="/assets/js/compare.js"></script>
+<script src="/assets/js/gothic.js"></script>
