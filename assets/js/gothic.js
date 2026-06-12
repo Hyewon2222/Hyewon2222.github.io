@@ -34,7 +34,7 @@ function analyze(text, stopwords) {
 
 // 메인 실행: 4개 파일을 동시에 fetch하여 처리
 Promise.all([
-    fetch("/assets/data/frankenstein.txt").then(r => {
+    fetch("/data/frankenstein.txt").then(r => {
         if (!r.ok) throw new Error("frankenstein.txt 로드 실패");
         return r.text();
     }),
